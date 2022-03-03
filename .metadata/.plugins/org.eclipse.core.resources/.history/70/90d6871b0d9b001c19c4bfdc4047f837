@@ -39,10 +39,5 @@ public class Rectangle  extends Shape{
 		double perimeter = 2*width*length;
 		return perimeter;
 	}
-	@Override
-	public String toString() {
-		return "Rectangle [width=" + width + ", length=" + length + ", color=" + color + ", filled=" + filled + "]";
-	}
-	
 
 }
