@@ -1,0 +1,27 @@
+package stringpractice;
+
+import java.util.Scanner;
+
+public class ReverseAString {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter a string");
+		String str = scan.nextLine();
+		char[] ch = str.toCharArray();
+		char[] ch1 = new char[ch.length];
+		
+		for(int i=ch.length-1;i>=0;i--)
+		{
+			ch1[i] = ch[i];
+		}
+		
+		for(char c:ch1)
+		{
+			System.out.print(c);
+		}
+		System.out.println();
+
+	}
+
+}

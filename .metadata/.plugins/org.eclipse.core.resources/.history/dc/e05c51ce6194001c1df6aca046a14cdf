@@ -1,0 +1,13 @@
+package com.mathematicalop.java;
+
+import java.util.Scanner;
+
+public class Addition {
+	Scanner scan = new Scanner(System.in);
+	
+	int valueOne= scan.nextInt();
+	int valueTwo = scan.nextInt();
+
+	
+
+}

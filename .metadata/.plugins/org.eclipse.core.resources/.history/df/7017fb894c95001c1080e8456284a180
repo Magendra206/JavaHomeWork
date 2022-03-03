@@ -1,0 +1,36 @@
+package stringpractice;
+
+import java.util.Scanner;
+
+public class RemoveDuplicates {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter a string");
+		String str = scan.nextLine();
+		char[] ch = new char[str.length()];
+		
+		char[] duplicate = new char[str.length()];
+		
+		for(int i=0;i<ch.length;i++)
+		{
+			ch[i] = str.charAt(i);
+		}
+		
+		
+		for(int i=0;i<ch.length;i++)
+		{
+			for(int j=i+1;j<ch.length;j++)
+			{
+				if(ch[i]==ch[j])
+				{
+					duplicate[i]=ch[j];
+				}
+			}
+		}
+		for(char c :duplicate) {
+			System.out.println(c);
+		}
+	}
+
+}

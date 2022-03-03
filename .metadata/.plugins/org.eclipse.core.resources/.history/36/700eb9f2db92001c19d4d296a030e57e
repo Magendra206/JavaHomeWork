@@ -1,0 +1,54 @@
+package helloworld;
+
+import java.util.Scanner;
+
+public class Application {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter the name of employee");
+		String name = scan.next();
+		System.out.println("Enter the Working Years of Employee");
+		int wy = scan.nextInt();
+		System.out.println("Enter the Department of Employee");
+		String department = scan.next();
+		System.out.println("Enter the employee Rating");
+		String rating = scan.nextLine();
+		System.out.println("Enter the employee salary");
+		int sal = scan.nextInt();
+		if(wy>=2 && rating.equals("average") || rating.equals("above average") || rating.equals("outstanding"))
+		{
+			System.out.println(name +" is eligible of bonus");
+			if(department.equals("HR"))
+			{
+				int bonus = sal*2/100;
+				System.out.println(bonus+"is increased by 2%");
+			}
+			else if(department.equals("Accounting"))
+			{
+				int bonus = sal*3/100;
+				System.out.println(bonus+"is increased by 3%");
+			}
+			else if(department.equals("IT"))
+			{
+				int bonus = sal*5/100;
+				System.out.println(bonus+"is increased by 5%");
+			}
+			else if(department.equals("sales"))
+			{
+				int bonus = sal*8/100;
+				System.out.println(bonus+"is increased by 8%");
+			}
+			
+		}
+		else
+		{
+			System.out.println("employee is not eligible for bonus");
+		}
+		
+		
+		
+
+	}
+
+}

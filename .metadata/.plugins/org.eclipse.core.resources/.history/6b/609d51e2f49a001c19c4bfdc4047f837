@@ -1,0 +1,16 @@
+package lambdademoo;
+@FunctionalInterface
+interface Car
+{
+	public void bookCar(String Source, String Destination);
+}
+
+public class String_Lambda {
+
+	public static void main(String[] args) {
+		Car c = (Source,Destination)->System.out.println("Ola car is Booked from"+Source+ "To"+Destination);
+		c.bookCar("Hydrabad", "Delhi");
+
+	}
+
+}

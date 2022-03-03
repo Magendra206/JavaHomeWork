@@ -1,0 +1,17 @@
+package com.mathematicalop.java;
+
+import java.util.Scanner;
+
+public class Addition {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter the value of one and two");
+		int valueOne= scan.nextInt();
+		int valueTwo = scan.nextInt();
+		System.out.println("Addition is "+(valueOne+valueTwo));
+	}
+	
+
+	
+
+}

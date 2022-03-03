@@ -1,0 +1,47 @@
+package lambdademoo;
+
+public class Rectangle extends Shape{
+	double width = 1.0;
+	double length = 1.0;
+	public Rectangle() {
+		super();
+	}
+	public Rectangle(double width, double length) {
+		super();
+		this.width = width;
+		this.length = length;
+	}
+	public Rectangle(double width, double length,String color, boolean filled) {
+		super(color, filled);
+		// TODO Auto-generated constructor stub
+	}
+	public double getWidth() {
+		return width;
+	}
+	public void setWidth(double width) {
+		this.width = width;
+	}
+	public double getLength() {
+		return length;
+	}
+	public void setLength(double length) {
+		this.length = length;
+	}
+	public double getPerimeter(double width,double length)
+	{
+		double perimeter = 2 *(width+length);
+		return perimeter;
+	}
+	public double getArea(double width,double length)
+	{
+		double area = width*length;
+		return area;
+	}
+	@Override
+	public String toString() {
+		return "Rectangle [width=" + width + ", length=" + length + ", color=" + color + ", filled=" + filled + "]";
+	}
+	
+	
+
+}
