@@ -1,9 +1,6 @@
 package inheritanceandother;
 
-import java.util.Scanner;
-
 public class ContractHourlyEmployee {
-	Scanner sc = new Scanner(System.in);
 		
 		float noOfYears_Contract;
 		float noOfYears_Completed;
@@ -23,3 +20,4 @@ public class ContractHourlyEmployee {
 
 	}
 
+}
