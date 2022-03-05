@@ -1,9 +1,0 @@
-package arraypractice;
-
-public class MergingTwoUnsortedArray {
-
-	public static void main(String[] args) {
-		
-	}
-
-}
