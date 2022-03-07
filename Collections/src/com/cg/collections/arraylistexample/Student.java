@@ -9,8 +9,8 @@ import java.util.regex.Pattern;
 public class Student {
 	private int studentId;
 	private String studentName;
-	private Date studentDob;
-	private String studentMobNo;
+	//private Date studentDob;
+	//private String studentMobNo;
 	private String studentEmail;
 	
 	public Student() {
@@ -21,8 +21,8 @@ public class Student {
 		super();
 		this.studentId = studentId;
 		this.studentName = studentName;
-		this.studentDob = studentDob;
-		this.studentMobNo = studentMobNo;
+		//this.studentDob = studentDob;
+		//this.studentMobNo = studentMobNo;
 		this.studentEmail = studentEmail;
 	}
 
@@ -42,7 +42,7 @@ public class Student {
 		this.studentName = studentName;
 	}
 
-	public Date getStudentDob() {
+	/*public Date getStudentDob() {
 		return studentDob;
 	}
 
@@ -56,7 +56,7 @@ public class Student {
 
 	public void setStudentMobNo(String studentMobNo) {
 		this.studentMobNo = studentMobNo;
-	}
+	}*/
 
 	public String getStudentEmail() {
 		return studentEmail;
@@ -65,11 +65,44 @@ public class Student {
 	public void setStudentEmail(String studentEmail) {
 		this.studentEmail = studentEmail;
 	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((studentEmail == null) ? 0 : studentEmail.hashCode());
+		result = prime * result + studentId;
+		result = prime * result + ((studentName == null) ? 0 : studentName.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Student other = (Student) obj;
+		if (studentEmail == null) {
+			if (other.studentEmail != null)
+				return false;
+		} else if (!studentEmail.equals(other.studentEmail))
+			return false;
+		if (studentId != other.studentId)
+			return false;
+		if (studentName == null) {
+			if (other.studentName != null)
+				return false;
+		} else if (!studentName.equals(other.studentName))
+			return false;
+		return true;
+	}
+
 
 	@Override
 	public String toString() {
-		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", studentDob=" + studentDob
-				+ ", studentMobNo=" + studentMobNo + ", studentEmail=" + studentEmail + "]";
+		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", studentEmail=" + studentEmail + "]";
 	}
 	
 	Scanner sc  = new Scanner(System.in);
@@ -82,16 +115,16 @@ public class Student {
 		System.out.println("Enter the student name");
 		sc.nextLine();//throw away the newline read by scanner
 		studentName = sc.nextLine();
-		System.out.println("Enter the student dob in 'dd/MM/yyyy' ");
-		String dob = sc.nextLine();
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		studentDob = sdf.parse(dob);
-		System.out.println("Enter the Student Mobile Number......");
-		studentMobNo =  sc.nextLine();
-		if(studentMobNo.matches("\\d{10}")) {
-			System.out.println("Mobile Number is valid");
-		}
-		if(checkMobileNumber(studentMobNo)) {
+		//System.out.println("Enter the student dob in 'dd/MM/yyyy' ");
+		//String dob = sc.nextLine();
+		//SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		//studentDob = sdf.parse(dob);
+		//System.out.println("Enter the Student Mobile Number......");
+		//studentMobNo =  sc.nextLine();
+		//if(studentMobNo.matches("\\d{10}")) {
+			//System.out.println("Mobile Number is valid");
+		//}
+		/*if(checkMobileNumber(studentMobNo)) {
 			System.out.println("Mobile Number is valid");
 		}else {
 			System.out.println("Entered Mobile number is not valid ....");
@@ -104,7 +137,7 @@ public class Student {
 			}else {
 				System.out.println("Thank you for providing your details.....");
 			}
-		}
+		}*/
 		
 		System.out.println("Enter the Student Email......");
 		studentEmail =  sc.nextLine();
@@ -123,8 +156,8 @@ public class Student {
 		System.out.println("Entered the Student data ...............");
 		System.out.println("Student id = " + studentId );
 		System.out.println("Student name = " + studentName);
-		System.out.println("Student dob = " + studentDob.getDate()+"/"+studentDob.getMonth()+"/"+studentDob.getYear());
-		System.out.println("Student MobNo = " + studentMobNo);
+		//System.out.println("Student dob = " + studentDob.getDate()+"/"+studentDob.getMonth()+"/"+studentDob.getYear());
+		//System.out.println("Student MobNo = " + studentMobNo);
 		System.out.println("Student Email = " + studentEmail);
 	}
 	
@@ -140,6 +173,16 @@ public class Student {
 		public static boolean validate(String emailStr) {
 		        Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(emailStr);
 		        return matcher.find();
+		}
+		public int compareTo(Student st) {
+			
+			if(this.studentName.compareTo(st.getStudentName()) == 0)
+				return 0;
+			else
+				if(this.studentName.compareTo(st.getStudentName()) > 0)
+					return 1;
+				else
+				    return -1;
 		}
 	
 }
