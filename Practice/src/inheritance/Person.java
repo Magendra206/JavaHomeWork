@@ -8,6 +8,9 @@ public class Person {
 		this.name = name;
 		this.address = address;
 	}
+	public Person(String programe, int year, double fee) {
+		// TODO Auto-generated constructor stub
+	}
 	public String getName() {
 		return name;
 	}
