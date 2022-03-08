@@ -1,6 +1,7 @@
 package com.cg.collections.arraylistexample;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class ProductCRUD {
@@ -59,6 +60,8 @@ public class ProductCRUD {
 	}
 
 	private void sortProduct() {
+		//Collections.sort(listOfProducts);
+		System.out.println(listOfProducts);
 		
 		
 	}
@@ -68,7 +71,7 @@ public class ProductCRUD {
 		System.out.println("Enter the product id to search...");
 		String pId = scan.nextLine();
 		for (int i = 0; i < listOfProducts.size(); i++) {
-			if(listOfProducts.get(i).getProductId() == pId) {
+			if(listOfProducts.get(i).getProductId().equals(pId)) {
 				product = listOfProducts.get(i);
 				System.out.println("Product Id" + "\t" + "Product Name" + "\t" + "Product price");
 				System.out.println(listOfProducts.get(i).getProductId() + "\t\t" +listOfProducts.get(i).getProductName() + "\t\t" +listOfProducts.get(i).getProductPrice() );
@@ -94,7 +97,7 @@ public class ProductCRUD {
 		String pId = scan.nextLine();
 	
 		for (int i = 0; i < listOfProducts.size(); i++) {
-			if(listOfProducts.get(i).getProductId() == pId) {
+			if(listOfProducts.get(i).getProductId().equals(pId)) {
 				Product p = listOfProducts.get(i);
 				System.out.println(p);
 				if(listOfProducts.remove(p)) {

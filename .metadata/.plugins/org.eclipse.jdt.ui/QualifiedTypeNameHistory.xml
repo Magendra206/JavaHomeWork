@@ -14,11 +14,14 @@
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
     <fullyQualifiedTypeName name="java.util.regex.Matcher"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.cg.collections.arraylistexample.EmployeeCRUDUsingArrayLiist"/>
     <fullyQualifiedTypeName name="arraypractice.CountDuplicateMain"/>
     <fullyQualifiedTypeName name="arraypractice.CountDuplicateInArray"/>
     <fullyQualifiedTypeName name="lmspractice.StudentAndEngineeringStudent"/>
     <fullyQualifiedTypeName name="lmspractice.EngineeringStudent"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.cg.collections.arraylistexample.ProductCRUD"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="lmspractice.RollNoValidate1"/>
 </qualifiedTypeNameHistroy>
