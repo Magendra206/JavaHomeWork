@@ -64,7 +64,7 @@ public class StudentCRUDUsingArrayList {
 }
 
 	private void sortStudent() {
-		Collections.sort(listOfStudents);
+		//Collections.sort(listOfStudents);
 		displayStudent();
 	}
 
