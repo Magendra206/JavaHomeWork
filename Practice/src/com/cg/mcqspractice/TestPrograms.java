@@ -44,7 +44,7 @@ public class TestPrograms {
         int arr[] = new int[5];
         System.out.println(arr);
         
-        abstract class xy
+		abstract class xy
         {
         	abstract void sum(int x, int y);
         }
